@@ -1,27 +1,18 @@
 # Forms
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## Steps to create a form:
+### Import Module
+- 1. app.module.ts: import the FormsModule
+- 2. app.module.ts: call the FormsModule in the imports array (under BrowserModule)
 
-## Development server
+### Create Form
+- 3. form.component.html: create a standard html form
+- 4. form.component.html: add the ngModel directive to the inputs fields. This will give you access to properties such as onChange and onTouched
+- 5. form.component.html: add the ngSubmit directive to the form element. Call a submit(). 
+- 6. form.component.ts: write a submit method
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Validate Form
+- 7. declare a variable on the input (eg. #name = "ngModel"). Now you can access properties of that variable. 
+- 7b. form.component.html: create a div to display the error message
+- 8. form.component.html: add the *ngIf structural directive and display div if an error is present
+- 9. form.component.html: the errors are stored in the ngModel
